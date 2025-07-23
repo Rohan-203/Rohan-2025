@@ -3,10 +3,173 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>ASSISTANT</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>robiul</h1>
-    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Assumenda eum soluta dolor enim natus! Molestias ea odit eos. Veniam, laudantium!</p>
+    <div class="name">
+<h1 class="logo">Robiul</h1>
+<input type="text" id="find" onkeyup="search()" placeholder="Search product...">
+</div>
+
+
+
+
+<!--prduct-list-->
+  <div class="product-list">
+    <div class="product" onclick="showDetails('product1')">
+      <img src="ti shart-2.jpg" alt="পাঞ্জাবি ১">
+      <h3>tree </h3>
+      <p>Price:1,200<span class="delet"><del>1,300</del></span> </p>
+    </div>
+    <div class="product" onclick="showDetails('product2')">
+      <img src="ti shart.jpg" alt="পাঞ্জাবি ২">
+      <h3>ti shart</h3>
+      <p>Price:১,৫০০<span class="delet"><del>1,300</del></span></p>
+    </div>
+    <!-- আরও প্রোডাক্ট এখানে যোগ করতে পারেন -->
+     <div class="product" onclick="showDetails('product2')">
+      <img src="pant.jpg" alt="পাঞ্জাবি ২">
+      <h3>lacchi </h3>
+      <p>Price:১,৫০০<span class="delet"><del>1,300</del></span></p>
+    </div>
+    <div class="product" onclick="showDetails('product2')">
+      <img src="cycle.jpg" alt="পাঞ্জাবি ২">
+      <h3>daraz </h3>
+      <p>Price:১,৫০০<span class="delet"><del>1,300</del></span></p>
+    </div>
+    <div class="product" onclick="showDetails('product2')">
+      <img src="bike.jpg" alt="পাঞ্জাবি ২">
+      <h3>bike</h3>
+      <p>Price:১,৫০০<span class="delet"><del>1,300</del></span></p>
+    </div>
+    <div class="product" onclick="showDetails('product2')">
+      <img src="drass.jpg" alt="পাঞ্জাবি ২">
+      <h3>bike</h3>
+      <p>Price:১,৫০০<span class="delet"><del>1,300</del></span></p>
+    </div>
+  </div>
+<!--BACK BUTTON-->
+  <div id="product-details" class="product-details">
+    <button class="close-btn" onclick="closeDetails()">✕ Back</button>
+    <img id="detail-image" src="" alt="Product Image">
+    <h3 id="detail-name"></h3>
+    <p id="detail-price"></p>
+    <p id="detail-color"></p>
+  </div>
+<footer>
+ <div class="box">
+  <div class="box-1 color"><h3>Largest product search engine, maximum categorized online shopping mall and quickest home delivery system.
+<br><br>
+Follow Us  
+         
+          <a href=""><i class="fa-brands fa-facebook-f"></i></a>
+          <a href=""><i class="fa-brands fa-twitter"></i> </a>
+          <a href=""><i class="fa-brands fa-square-instagram"></i></a>
+          </h3> </div>
+  <div class="box-2 color"><h3>Contact Us
+
+House #8, Road # 14,
+Dhanmondi, Dhaka-1209.
+
+Email: support@e-valy.com</h3> </div>
+  <div class="box-3 color"><h3>Let Us Help You
+
+    Your Account
+    Your Order
+    Terms & Conditions
+    Return & Refund Policy
+    FAQ</h3> </div>
+ </div>
+
+</footer>
+    <script>
+         const products = {
+      product1: {
+        name: 'tree ',
+        image: 'tree.jpg',
+        price: '৳1,200',
+        color: ':blue,red,black'
+      },
+      product2: {
+        name: 'ti shart 2',
+        image: 'ti shart.jpg',
+        price: '৳১,৫০০',
+        color: 'নীল'
+      },
+       product2: {
+        name: 'পাঞ্জাবি 3',
+        image: 'ti shart.jpg',
+        price: '৳১,৫০০',
+        color: 'নীল'
+      },
+       product2: {
+        name: 'পাঞ্জাবি 4',
+        image: 'ti shart.jpg',
+        price: '৳১,৫০০',
+        color: 'নীল'
+      },
+       product2: {
+        name: 'পাঞ্জাবি 5',
+        image: 'ti shart.jpg',
+        price: '৳১,৫০০',
+        color: 'নীল'
+      },
+       product2: {
+        name: 'পাঞ্জাবি 6',
+        image: 'ti shart.jpg',
+        price: '৳১,৫০০',
+        color: 'নীল'
+      },
+       product2: {
+        name: 'পাঞ্জাবি 7',
+        image: 'ti shart.jpg',
+        price: '৳১,৫০০',
+        color: 'নীল'
+      },
+       product2: {
+        name: 'পাঞ্জাবি ২',
+        image: 'bike.jpg',
+        price: '৳১,৫০০',
+        color: 'নীল'
+      },
+      // প্রোডাক্ট ৩ থেকে ১৫০ পর্যন্ত এখানে যোগ করুন
+    };
+
+    function showDetails(productId) {
+      const prod = products[productId];
+      if (!prod) return;
+
+      document.getElementById('detail-image').src = prod.image;
+      document.getElementById('detail-name').textContent = prod.name;
+      document.getElementById('detail-price').textContent = prod.price;
+      document.getElementById('detail-color').textContent = 'color: ' + prod.color;
+
+      document.getElementById('product-details').classList.add('show');
+    }
+
+    function closeDetails() {
+      document.getElementById('product-details').classList.remove('show');
+    }
+  </script>
+  <!--search box-->
+<script type="text/javascript">
+  function search() {
+    let filter = document.getElementById('find').value.toUpperCase();
+    let items = document.querySelectorAll('.product');
+
+    for (let i = 0; i < items.length; i++) {
+      // h2 বা h3 — যেটাই থাকুক না কেন
+      let title = items[i].querySelector('h2, h3');
+      let value = title?.innerText || "";
+
+      if (value.toUpperCase().includes(filter)) {
+        items[i].style.display = "";
+      } else {
+        items[i].style.display = "none";
+      }
+    }
+  }
+    </script>
 </body>
 </html>
