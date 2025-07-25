@@ -143,6 +143,100 @@
     font-size:22px;
   line-height:33px;
   }
+  .Latest{
+   text-align: center;
+   font-size:50px;
+  
+  }
+  .roses{
+    font-size:22px;
+  }
+  .image-container {
+  position: relative;
+  /* optionally define size or width */
+  display: inline-block; /* shrink-wrap to images */
+}
+  .flower {
+  display: block; /* or inline-block */
+  position: relative;
+  z-index: 1;
+}
+
+.true {
+  position: absolute;
+  bottom:400px;   
+  left: 360px;    
+  z-index: 2;    
+  width:286px;
+  height:286px;
+}
+.one-title{
+  margin-top:150px;
+}
+.imeg-pera{
+  
+  margin: auto;
+  width:1140px;
+  height:423.13px;
+ 
+  display: flex;
+}
+.bloom{
+  width:344px;
+  height:201px;
+border-radius:20px;
+}
+.deal{
+  width:344px;
+  height:197px;
+  border-radius:20px;
+  margin-top:20px;
+}
+.zab{
+  width:753px;
+  height:423.13px;
+  border-radius:20px;
+  margin-left:33px;
+}
+.image-wrapper {
+  
+  position: relative;
+  display: inline-block;
+}
+
+.overlay-text {
+  position: absolute;
+  top:50%;
+  left:50%;
+  color: white;
+   transform: translate(-50%, -50%);
+  align-items: center;
+  padding: 8px 12px;
+  border-radius: 8px;
+   direction: rtl; 
+  text-align:center;
+}
+
+.overlay-text h3 {
+ justify-content: center;
+ text-align: center;
+  font-size:20px;
+}
+
+.overlay-text p {
+  margin: 4px 0 0;
+  font-size: 14px;
+}
+.big{
+  font-size:40px;
+  font-weight: bold;
+  
+}
+hr{
+  width:50%;
+ 
+  color:#FFFFFF;
+}
 </style>
 <body>
   <header>
@@ -181,8 +275,10 @@
   </header>
   <footer>
     <div class="plants">
-      <img class="flower" src="../Rohan-2025/assets/flower-store.png">
-   
+      <div class="image-container">
+  <img class="flower" src="../Rohan-2025/assets/flower-store.png" alt="Flower store">
+  <img class="true" src="../Rohan-2025/assets/trusted-badge.png" alt="Trusted badge">
+</div>
 <div class="Lover"><p class=""><h2>Flower & Plants<br> Lover</h2><br>
   <ul>
     <li>
@@ -195,10 +291,56 @@
       Indulge your senses with the beauty and fragrance of our fresh flower shop. From classic roses to exotic blooms, we offer a wide variety of fresh.
     </li>
   </ul>
-
-</p> </div>
-
+</p> 
+</div>
     </div>
   </footer>
+<nevbar>
+<div class="one-title">
+  <p class="Latest"><span class="sei"> Latest</span>  Deals<span class="roses"><br> Indulge your senses with the beauty and fragrance of our fresh flower shop. From<br> classic roses to exotic blooms, we offer a wide variety of fresh.</span>  </p>
+</div>
+<div class="imeg-pera">
+  <div class="imeg-box1">
+    <div class="imeg-1 image-wrapper">
+      <img class="bloom" src="../Rohan-2025/assets/deal-bloom.png" alt="">
+      <div class="overlay-text">
+        <h3>60% Off | Bloom Planth<br>Shop Now<hr> </h3>
+       
+      </div>
+    </div>
+    <div class="imeg-3 image-wrapper">
+      <img class="deal" src="../Rohan-2025/assets/deal-ana.png" alt="">
+      <div class="overlay-text">
+        <h3>30% Off | Ana  Plant<br><hr>
+Shop Now</h3>
+        
+      </div>
+    </div>
+  </div>
+
+  <div class="imeg-box2">
+    <div class="imeg-3 image-wrapper">
+      <img class="zab" src="../Rohan-2025/assets/deal-zabo.png" alt="">
+      <div class="overlay-text">
+        <h3><span class="big">25% Off | Zabo Plant<br> Shop Now<hr> </span> </h3>
+        
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+</nevbar>
+
+
+
+
+
+
+
+
+
+
 </body>
 </html>
