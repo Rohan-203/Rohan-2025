@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+    <!---   <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -8,7 +8,7 @@
     .product-list{
       width:1140px;
      /* height:1186.88px; */
-    border:3px solid black;
+    
      margin: auto;
      
     }
@@ -16,13 +16,14 @@
     .product{
       display: flex;
       flex-wrap: wrap;
-      gap:10px;
-      justify-content: center;
+      /*gap:10px;*/
+     /* justify-content: center;*/
+      border:1px solid red;
     }
 .product-cart{
   width:270px;
   height:484.94px;
-  
+  border:5px solid red;
 }
 
 .Our{
@@ -54,7 +55,7 @@ button{
 .img-box {
  width:1140px;
  height:423.13px;
- border:5px solid red;
+ border:1px solid red;
  display: flex;
 margin: auto;
 gap:30px;
@@ -110,10 +111,12 @@ gap:30px;
   .product{
     display: flex;
     flex-wrap: wrap;
-   gap:10px;
+    
+   gap:5px;
+   
   }
   .product-cart{
-    width:220px;
+    width:215px; 
    
   }
   .product-list{
@@ -173,9 +176,11 @@ gap:30px;
 <div class="product-cart"><img class="Rohan" src="../Rohan-2025/assets/sample-flower-image.png" alt=""> <p class="name">Lily Blossom<br> <span>20 USD</span> </p> <button>ADD TO CART</button> </div>
 <div class="product-cart"><img class="Rohan" src="../Rohan-2025/assets/sample-flower-image.png" alt=""> <p class="name">Lily Blossom<br> <span>20 USD</span> </p> <button>ADD TO CART</button> </div>
 <div class="product-cart"><img class="Rohan" src="../Rohan-2025/assets/sample-flower-image.png" alt=""> <p class="name">Lily Blossom<br> <span>20 USD</span> </p> <button>ADD TO CART</button> </div>
+
+<a href=""><div class="product-cart"><img class="Rohan" src="../Rohan-2025/assets/sample-flower-image.png" alt=""> <p class="name">Lily Blossom<br> <span>20 USD</span> </p> <button>ADD TO CART</button> </div></a>
    </div>
   </div>
- <!--<div class="img-box">
+ <div class="img-box">
   <div class="boxtwo"> 
      <div class="img1">
       <img class="deal" src="../Rohan-2025/assets/deal-ana.png" alt="">
@@ -189,7 +194,7 @@ gap:30px;
   <img class="deal3" src="../Rohan-2025/assets/deal-zabo.png" alt=""></div>
   <div class="up">robiul is king master</div>
 </div>
--->
+
 
 
 
@@ -206,5 +211,330 @@ gap:30px;
 </div>
 
 
+</body>
+</html> -->
+
+
+ <!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Robiul.com</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+    }
+.name{
+  text-align: center;
+}
+input[type ="text"]{
+ width:500px;
+  height:30px;
+  font-size:18px;
+}
+
+    .product-list {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap:10px;
+      padding: 20px;
+    }
+    .product {
+      
+      width: 200px;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      overflow: hidden;
+      background-color: #fff;
+      cursor: pointer;
+      transition: transform 0.3s;
+      text-align: center;
+    }
+    .product:hover {
+      transform: scale(1.05);
+    }
+    .product img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+    .product h3 {
+      font-size: 15px;
+     margin-right:60%;
+    }
+    .product p {
+      font-size: 14px;
+      color: #555;
+      margin-right:50%;
+    }
+/*phone size */
+  @media  screen and (max-width:400px) {
+    
+.product{
+   width:155px;
+   gap:0px;
+}
+.box{
+  flex-direction: column;
+  max-width:90%;
+ 
+}
+input[type ="text"]{
+ width:90%;
+}
+.product-details{
+ 
+}
+
+  }
+    /* Fullscreen popup styles */
+    .product-details {
+       
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      /*
+      background-color: rgba(0,0,0,0.8);
+      */
+      background-color: #f4f4f4;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+      z-index: 1000;
+      visibility: hidden;
+      opacity: 0;
+      transition: opacity 0.3s;
+    }
+    .product-details.show {
+      visibility: visible;
+      opacity: 1;
+    }
+    .product-details img {
+      width: 300px;
+      height: auto;
+      border-radius: 8px;
+      margin-bottom: 20px;
+      object-fit: cover;
+    }
+    .product-details h3 {
+      font-size: 24px;
+      /*
+      color: #fff;
+      */
+      color:black;
+     
+    }
+    .product-details p {
+      font-size: 18px;
+      /*
+      color: #ddd;
+      */
+      
+    }
+    .close-btn {
+      position: absolute;
+      top: 20px;
+      /*
+      right:100px;
+      */
+      left:20px;
+      background: #ff5555;
+      color: #fff;
+      border: none;
+      padding: 10px 15px;
+      cursor: pointer;
+      font-size: 16px;
+      border-radius: 4px;
+    }
+    .delet{
+      color:red;
+      font-size:11px;
+    }
+    .box{
+      display: flex;
+      margin: auto;
+     width:1000px;
+      min-height:300px;
+      background-color: black;
+      padding-left:30px;
+    }
+    .color{
+      color:#d9d1d1;
+     font-size:15px;
+    }
+    .fa-facebook-f{
+     color:#ddd;
+     font-size:26px;
+    }
+    .fa-twitter{
+       color:#ddd;
+     font-size:26px;
+    }
+    .fa-square-instagram{
+ color:#ddd;
+     font-size:26px;
+    }
+  </style>
+</head>
+
+<body>
+
+
+<div class="name">
+<h1 class="logo">Robiul</h1>
+<input type="text" id="find" onkeyup="search()" placeholder="Search product...">
+</div>
+
+
+
+
+<!--prduct-list-->
+  <div class="product-list">
+    <div class="product" onclick="showDetails('product1')"><img src="paper.jpg" alt="পাঞ্জাবি ১"><h3>paper</h3><p>Price:1,200<span class="delet"><del>1,300</del></span> </p></div>
+    <div class="product" onclick="showDetails('product2')"><img src="flower.jpg" alt="পাঞ্জাবি ২"><h3>flower</h3><p>Price:১,৫০০<span class="delet"><del>1,300</del></span></p></div>
+    <!-- আরও প্রোডাক্ট এখানে যোগ করতে পারেন -->
+     <div class="product" onclick="showDetails('product3')"><img src="city.jpg" alt="পাঞ্জাবি ২"><h3>city</h3><p>Price:১,৫০০<span class="delet"><del>1,300</del></span></p></div>
+    <div class="product" onclick="showDetails('product4')"><img src="tree.jpg" alt="পাঞ্জাবি ২"><h3>tree</h3><p>Price:১,৫০০<span class="delet"><del>1,300</del></span></p></div>
+    <div class="product" onclick="showDetails('product5')"><img src="man.jpg" alt="পাঞ্জাবি ২"><h3>man</h3><p>Price:১,৫০০<span class="delet"><del>1,300</del></span></p></div>
+    <div class="product" onclick="showDetails('product6')"><img src="car.jpg" alt="পাঞ্জাবি ২"><h3>car</h3><p>Price:১,৫০০<span class="delet"><del>1,300</del></span></p></div>
+  </div>
+<!--BACK BUTTON-->
+  <div id="product-details" class="product-details">
+    <button class="close-btn" onclick="closeDetails()">✕ Back</button>
+    <img id="detail-image" src="" alt="Product Image">
+    <h3 id="detail-name"></h3>
+    <p id="detail-price"></p>
+    <p id="detail-color"></p>
+
+   <button> <a href="https://api.whatsapp.com/send?phone=88016141538208&text=Hello%20I'm%20interested" target="_blank">
+  Order Now
+</a></button>
+
+   
+  </div>
+<footer>
+ <div class="box">
+  <div class="box-1 color"><h3>Largest product search engine, maximum categorized online shopping mall and quickest home delivery system.
+<br><br>
+Follow Us           
+          <a href=""><i class="fa-brands fa-facebook-f"></i></a>
+          <a href=""><i class="fa-brands fa-twitter"></i> </a>
+          <a href=""><i class="fa-brands fa-square-instagram"></i></a>
+          </h3> </div>
+  <div class="box-2 color"><h3>Contact Us
+
+House #8, Road # 14,
+Dhanmondi, Dhaka-1209.
+
+Email: support@e-valy.com</h3> </div>
+  <div class="box-3 color"><h3>Let Us Help You
+
+    Your Account
+    Your Order
+    Terms & Conditions
+    Return & Refund Policy
+    FAQ</h3> </div>
+ </div>
+
+</footer>
+  <script>
+    const products = {
+      product1: {
+        name: 'paper ',
+        image: 'paper.jpg',
+        price: '৳1,200',
+        color: ':blue,red,black',
+        
+      },
+      product2: {
+        name: 'flower ',
+        image: 'flower.jpg',
+        price: '৳১,৫০০',
+        color: 'নীল'
+      },
+       product3: {
+        name: 'city',
+        image: 'city.jpg',
+        price: '৳১,৫০০',
+        color: 'নীল'
+      },
+       product4: {
+        name: 'tree',
+        image: 'tree.jpg',
+        price: '৳১,৫০০',
+        color: 'নীল'
+      },
+       product5: {
+        name: 'man',
+        image: 'man.jpg',
+        price: '৳১,৫০০',
+        color: 'নীল'
+      },
+       product6: {
+        name: 'car',
+        image: 'car.jpg',
+        price: '৳১,৫০০',
+        color: 'নীল'
+      },
+        product7: {
+        name: 'পাঞ্জাবি 7',
+        image: 'ti shart.jpg',
+        price: '৳১,৫০০',
+        color: 'নীল'
+      },
+        product8: {
+        name: 'পাঞ্জাবি ২',
+        image: 'bike.jpg',
+        price: '৳১,৫০০',
+        color: 'নীল'
+       },
+      // প্রোডাক্ট ৩ থেকে ১৫০ পর্যন্ত এখানে যোগ করুন
+    };
+
+    function showDetails(productId) {
+      const prod = products[productId];
+      if (!prod) return;
+
+      document.getElementById('detail-image').src = prod.image;
+      document.getElementById('detail-name').textContent = prod.name;
+      document.getElementById('detail-price').textContent = prod.price;
+      document.getElementById('detail-color').textContent = 'color: ' + prod.color;
+
+      document.getElementById('product-details').classList.add('show');
+    }
+
+    function closeDetails() {
+      document.getElementById('product-details').classList.remove('show');
+    }
+  </script>
+  <!--search box-->
+<script type="text/javascript">
+  function search() {
+    let filter = document.getElementById('find').value.toUpperCase();
+    let items = document.querySelectorAll('.product');
+
+    for (let i = 0; i < items.length; i++) {
+      // h2 বা h3 — যেটাই থাকুক না কেন
+      let title = items[i].querySelector('h2, h3');
+      let value = title?.innerText || "";
+
+      if (value.toUpperCase().includes(filter)) {
+        items[i].style.display = "";
+      } else {
+        items[i].style.display = "none";
+      }
+    }
+  }
+</script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </body>
 </html>
