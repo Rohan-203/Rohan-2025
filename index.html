@@ -272,6 +272,15 @@ input[type ="text"]{
       color: #555;
       margin-right:50%;
     }
+    .box-1{
+      border:5px solid red;
+    }
+    .box-2{
+      border:5px solid red;
+    }
+    .box-3{
+      border:5px solid red;
+    }
 /*phone size */
   @media  screen and (max-width:400px) {
     
@@ -279,17 +288,28 @@ input[type ="text"]{
    width:155px;
    gap:0px;
 }
-.box{
+/*.box{
   flex-direction: column;
   max-width:90%;
- 
-}
+ display: flex;
+flex-wrap: wrap;
+flex-direction: column;
+}*/
 input[type ="text"]{
  width:90%;
 }
 .product-details{
  
 }
+
+ .box {
+    display: flex;
+    flex-direction: column; /* একটার পর একটা নামবে */
+    align-items: center;    /* মাঝখানে সাজাবে */
+    gap: 15px;
+  }
+
+
 
   }
     /* Fullscreen popup styles */
@@ -363,7 +383,7 @@ input[type ="text"]{
       display: flex;
       margin: auto;
      width:1000px;
-      min-height:300px;
+      height:300px;
       background-color: black;
       padding-left:30px;
     }
@@ -421,7 +441,7 @@ input[type ="text"]{
 
    
   </div>
-<footer>
+  <!---- <footer>
  <div class="box">
   <div class="box-1 color"><h3>Largest product search engine, maximum categorized online shopping mall and quickest home delivery system.
 <br><br>
@@ -445,7 +465,7 @@ Email: support@e-valy.com</h3> </div>
     FAQ</h3> </div>
  </div>
 
-</footer>
+</footer> -->
   <script>
     const products = {
       product1: {
