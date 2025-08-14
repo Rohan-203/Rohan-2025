@@ -273,19 +273,17 @@ input[type ="text"]{
       color: #555;
       margin-right:50%;
     }
-    .box-1{
-      border:5px solid red;
-    }
-    .box-2{
-      border:5px solid red;
-    }
-    .box-3{
-      border:5px solid red;
-    }
+    
+   
+    
 /*phone size */
  @media screen and (max-width: 600px) {
     .name {
         color: red;
+    }
+    .box{
+      flex-direction: column;
+      
     }
 }
 
@@ -359,10 +357,10 @@ input[type ="text"]{
     .box{
       display: flex;
       margin: auto;
-     width:1000px;
-      height:300px;
-      background-color: black;
-      padding-left:30px;
+     max-width:1000px;
+     min-height:200px;
+      background-color: rgb(17, 3, 3);
+      padding:30px;
     }
     .color{
       color:#d9d1d1;
@@ -433,7 +431,7 @@ input[type ="text"]{
 
    
   </div>
-  <!---- <footer>
+  <footer>
  <div class="box">
   <div class="box-1 color"><h3>Largest product search engine, maximum categorized online shopping mall and quickest home delivery system.
 <br><br>
@@ -457,7 +455,7 @@ Email: support@e-valy.com</h3> </div>
     FAQ</h3> </div>
  </div>
 
-</footer> -->
+</footer> 
   <script>
     const products = {
       product1: {
